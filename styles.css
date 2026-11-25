@@ -21,11 +21,8 @@ h1,h2,h3,p{margin-top:0}
 .page-subtitle{color:var(--aqua);font-size:1rem;font-weight:750;line-height:1.5;letter-spacing:.09em;margin:0}
 .metrics{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:0}
 .metric{background:linear-gradient(155deg,#192d38,var(--panel) 75%);border:1px solid var(--border);border-top-color:#41646c;border-radius:13px;min-height:112px;padding:14px 17px;display:flex;flex-direction:column;justify-content:center;gap:4px}
-.metric dt,.metric-caption{color:var(--muted);font-size:.875rem;line-height:1.45;overflow-wrap:anywhere}
-.metric dt{font-weight:750}
-.metric dd{margin:0}
-.metric-value,.metric-caption{display:block}
-.metric-value{font-size:1.8rem;font-weight:800;line-height:1.2;letter-spacing:-.025em;overflow-wrap:anywhere;margin-bottom:4px}
+.metric dt{color:var(--muted);font-size:.875rem;font-weight:750;line-height:1.45;overflow-wrap:anywhere}
+.metric-value{margin:0;font-size:1.8rem;font-weight:800;line-height:1.2;letter-spacing:-.025em;overflow-wrap:anywhere}
 .metric.champion{background:linear-gradient(125deg,#2b241f,#1b2025);border-color:#574031}
 .metric.champion .metric-value{color:var(--orange)}
 .views{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:5px;margin:22px 0 24px;padding:5px;background:#101c25;border:1px solid var(--border);border-radius:12px;scroll-margin-top:12px}
