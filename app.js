@@ -8,7 +8,7 @@ const views = [...document.querySelectorAll('.views a')];
 const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
 const SYNC_INTERVAL_MS = 12000;
 const RETRY_INTERVAL_MS = 10000;
-const CACHE_KEY = 'motor-boat-race:results:v1';
+const CACHE_KEY = 'Model-boat-race:results:v1';
 const dash = '—';
 const escape = value => String(value ?? '').replace(/[&<>"']/g, char => ({
   '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;',
