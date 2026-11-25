@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b171e">
+  <meta name="description" content="Follow Motor Boat Race results, the race schedule, standings and playoff brackets.">
+  <title>Motor Boat Race | Marine Institute</title>
+  <link rel="stylesheet" href="./styles.css?v=6">
+  <script defer src="./vendor/motion-12.23.24.js"></script>
+  <script type="module" src="./app.js?v=6"></script>
+</head>
+<body>
+  <a class="skip" href="#race-content">Skip to results</a>
+  <main>
+    <div class="wrap">
+      <header class="page-heading">
+        <div>
+          <h1>Motor Boat Race</h1>
+          <p class="page-subtitle">MARINE INSTITUTE</p>
+        </div>
+        <div class="heading-actions">
+          <button class="refresh" type="button" id="refresh" aria-label="Refresh results" title="Refresh results"><span aria-hidden="true">⟳</span></button>
+          <span class="connection" id="connection" role="status" aria-label="Results status"></span>
+        </div>
+      </header>
+      <section aria-label="Tournament at a glance">
+        <dl class="metrics" id="metrics">
+          <div class="metric">
+            <dt>Competing teams</dt>
+            <dd><span class="metric-value" id="team-count">—</span><span class="metric-caption">Team roster</span></dd>
+          </div>
+          <div class="metric">
+            <dt>Group stage</dt>
+            <dd><span class="metric-value" id="group-progress">—</span><span class="metric-caption">Races decided</span></dd>
+          </div>
+          <div class="metric">
+            <dt>Playoff field</dt>
+            <dd><span class="metric-value" id="playoff-count">—</span><span class="metric-caption">Qualified teams</span></dd>
+          </div>
+          <div class="metric champion">
+            <dt>Motor Boat Race Champion</dt>
+            <dd><span class="metric-value" id="champion-name">—</span><span class="metric-caption">Championship final</span></dd>
+          </div>
+        </dl>
+      </section>
+      <nav class="views" aria-label="Race center views">
+        <a href="#races"><span aria-hidden="true">⚑</span> Race Schedule</a>
+        <a href="#standings"><span aria-hidden="true">▥</span> Standings</a>
+        <a href="#bracket"><span aria-hidden="true">◇</span> Playoffs</a>
+      </nav>
+      <section class="content" id="race-content" aria-label="Race information" tabindex="-1">
+        <noscript><p class="notice">Enable JavaScript to view race information.</p></noscript>
+      </section>
+      <footer>
+        <div><span class="foot-brand">MOTOR BOAT RACE</span><span id="last-check"></span></div>
+      </footer>
+    </div>
+  </main>
+</body>
+</html>
