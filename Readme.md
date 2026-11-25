@@ -4,10 +4,10 @@ A live dashboard for the Model Boat Race.
 
 ## GitHub Pages
 
-1. Open **Settings → Pages** in the [GitHub repository](https://github.com/anmshar03/mi_motor_boat_race_competition).
+1. Open **Settings → Pages** in the [GitHub repository](https://github.com/anmshar03/mi_model_boat_race_competition).
 2. Under **Build and deployment**, choose **Deploy from a branch**.
 3. Select the `main` branch and `/ (root)`, then choose **Save**.
-4. After GitHub finishes publishing, open [Motor Boat Race](https://anmshar03.github.io/mi_motor_boat_race_competition/).
+4. After GitHub finishes publishing, open [Model Boat Race](https://anmshar03.github.io/mi_model_boat_race_competition/).
 
 The repository contains the files GitHub Pages serves directly. The `.nojekyll` file disables Jekyll processing. [GitHub Pages publishing instructions](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site)
 
