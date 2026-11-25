@@ -74,9 +74,8 @@ function table(headers, rows, layout) {
   </table></div>`;
 }
 
-function panel(title, description, body) {
-  return `<section class="panel"><header class="panel-header"><h2>${title}</h2>
-    <p>${description}</p></header>${body}</section>`;
+function panel(title, body) {
+  return `<section class="panel"><header class="panel-header"><h2>${title}</h2></header>${body}</section>`;
 }
 
 function standingsTable(rows) {
@@ -94,7 +93,7 @@ function standingsTable(rows) {
 function races() {
   const rounds = [...new Set(snapshot.races.map(row => row[2]).filter(Boolean))];
   if (!rounds.includes(filters.round)) filters.round = '';
-  return panel('Group-stage schedule', 'Race times, lane assignments and recorded winners.',
+  return panel('Group-stage schedule',
     `<div class="controls">
       <label>Team <input id="race-search" type="search" placeholder="Search teams" value="${escape(filters.raceSearch)}"></label>
       <label>Round <select id="round"><option value="">All rounds</option>${rounds.map(round =>
@@ -123,7 +122,7 @@ function bracket() {
         <span class="time">${text(lane.time)}</span></div>`).join('')}
       <p>Recorded winner <strong>${hasValue(match.winner) ? text(match.winner) : dash}</strong></p></article>`).join('')}
     </section>`).join('');
-  return panel('Playoff bracket', 'Quarterfinals, semifinals and the championship final.', `<div class="bracket">${stages}</div>`);
+  return panel('Playoff bracket', `<div class="bracket">${stages}</div>`);
 }
 
 function renderMetrics() {
@@ -147,7 +146,7 @@ function renderView({ navigate = false } = {}) {
   const next = location.hash.slice(1);
   const pages = {
     races,
-    standings: () => panel('Group-stage standings', 'Ranked by wins, then average race time.', standingsTable(snapshot.standings)),
+    standings: () => panel('Group-stage standings', standingsTable(snapshot.standings)),
     bracket,
   };
   if (next !== 'race-content' || !view) view = Object.hasOwn(pages, next) ? next : 'races';
